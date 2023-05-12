@@ -1,5 +1,5 @@
 # FROM php:fpm
-FROM php:7.0-apache
+FROM php:8-apache
 # パッケージリスト更新後にパッケージをインストール
 RUN apt-get update && apt-get install -y git zip unzip
 COPY . /usr/src/myapp
