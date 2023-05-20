@@ -2,13 +2,13 @@ version: "3"
 
 services:
   my-composer:
-    image: sk_smart43:latest
-    container_name: sk_smart
+    image: smart_sk2023:latest
+    container_name: smart_sk
     # カレントディレクトリでイメージを構築
     build: .
     # カレントディレクトリをコンテナへマウント
     volumes:
-      - "./:/var/www/html/"
+      - ".:/var/www/html"
     ports:
       - 8085:80
     # プロセスを継続させてコンテナの正常終了を防ぐ

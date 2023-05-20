@@ -1,13 +1,11 @@
 <?php
+require_once __DIR__ . '/vendor/autoload.php';
+require_once('new_menu.php');
 
-	if($_SERVER['SERVER_NAME'] == 'localhost:8085'){
-		require_once('dir_base_docker.php');
-	}elseif($_SERVER['SERVER_NAME'] == 'sunkithokkaido.local'){
-		require_once('dir_base_local.php');
-	}elseif($_SERVER['SERVER_NAME'] == 'sunkithokkaido.com'){
-		require_once('dir_base_www.php');
-	}elseif($_SERVER['SERVER_NAME'] == 'smart.sunkit'){
-		require_once('dir_base_home.php');
-	}
-	
+// 1
+$smarty = new Smarty();
+
+// 2
+$smarty->template_dir = __DIR__ . '/templates';
+$smarty->compile_dir = __DIR__ . '/templates_c';
 ?>
